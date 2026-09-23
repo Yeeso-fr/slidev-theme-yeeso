@@ -1,0 +1,34 @@
+/* Kobbi 1.1 — © 2021 Jérémy Schneider (VJ Type), licence d'usage acquise par
+   Yeeso — police de marque, réservée aux titres et accents. Arimo (texte courant) et Fira Code (code) sont chargées depuis
+   Google Fonts par Slidev (voir `slidev.defaults.fonts` dans package.json). */
+@font-face {
+  font-family: "Kobbi 1.1";
+  src: url("./fonts/kobbi/kobe11-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kobbi 1.1";
+  src: url("./fonts/kobbi/kobe11-oblique.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kobbi 1.1";
+  src: url("./fonts/kobbi/kobe11-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kobbi 1.1";
+  src: url("./fonts/kobbi/kobe11-black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

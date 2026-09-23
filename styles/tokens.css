@@ -1,0 +1,83 @@
+/* Palette officielle de la charte Yeeso (agence Out Of Frame, novembre 2023),
+   reprise du design system du site (src/ui-kit/styles/theme/_variables.css).
+   Les layouts et composants ne consomment que les tokens sémantiques
+   (--color-*), jamais les codes hex ni la palette brute. */
+:root {
+  /* PALETTE BRUTE */
+  --yeeso-primary: #212f7a;
+  --yeeso-primary-tint: #a6accd;
+  --yeeso-coral: #e77169;
+  --yeeso-green: #60d1a4;
+  --yeeso-mauve: #efabff;
+  --yeeso-cream: #f9f7ee;
+  --yeeso-noir-velours: #2b2b2b;
+  --yeeso-black-pearl: #081930;
+  --yeeso-oxford-blue: #3d495a;
+  --yeeso-shark: #202428;
+  --yeeso-white: #fff;
+
+  /* FONTS */
+  --font-primary: "Arimo", Helvetica, Arial, sans-serif;
+  --font-secondary: "Kobbi 1.1", "Arimo", Helvetica, Arial, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* Couleur primaire Slidev (liens, barre de progression, `text-primary`…),
+     surchargeable via `themeConfig.primary`. */
+  --slidev-theme-primary: var(--yeeso-primary);
+
+  /* THÈME CLAIR (défaut) — fond crème, texte marine */
+  --color-background: var(--yeeso-cream);
+  --color-surface: var(--yeeso-white);
+  --color-text: var(--yeeso-black-pearl);
+  --color-text-muted: var(--yeeso-oxford-blue);
+  --color-heading: var(--yeeso-primary);
+  --color-border: var(--yeeso-primary);
+  /* Accents décoratifs uniquement. Mauve et mint dominent les décors
+     (ronds, pastilles, puces, liserés) ; le corail reste une touche, réservée
+     aux soulignés de texte et à quelques points : il n'atteint que ~3:1 sur
+     fond clair et ne porte jamais de texte courant. */
+  --color-accent: var(--yeeso-coral);
+  --color-accent-soft: var(--yeeso-mauve);
+  --color-accent-fresh: var(--yeeso-green);
+  /* Fond du rond « grand concept » : bleu tint, identique dans les deux
+     thèmes. Slogan marine dessus : 5,5:1 (grand texte gras, AAA). */
+  --color-concept-background: var(--yeeso-primary-tint);
+  /* Fond des QR codes : blanc dans les deux thèmes, pour rester lisible
+     par les appareils photo. */
+  --color-qr-background: var(--yeeso-white);
+  /* Fond des logos de partenaires : blanc dans les deux thèmes, les logos
+     sont dessinés pour un fond clair. */
+  --color-logo-background: var(--yeeso-white);
+  /* Contour des portraits détourés (charte) : blanc dans les deux thèmes. */
+  --color-portrait-outline: var(--yeeso-white);
+  /* Rond derrière le portrait : mauve en clair, marine en sombre. */
+  --color-portrait-background: var(--yeeso-mauve);
+  /* Pastille « numéro de slide » : inversée par rapport au fond. */
+  --color-badge-background: var(--yeeso-primary);
+  --color-badge-text: var(--yeeso-white);
+  /* Texte posé sur un aplat de la palette (mauve, corail, mint) : toujours
+     marine, quel que soit le thème (contraste ≥ 4,5:1 sur les trois). */
+  --color-on-accent: var(--yeeso-primary);
+
+  /* Blocs de code : fond carte du thème, texte courant. */
+  --slidev-code-background: var(--color-surface);
+  --slidev-code-foreground: var(--color-text);
+}
+
+/* THÈME SOMBRE — fond « black pearl » du site. Le marine #212f7a échoue le
+   contraste sur ce fond (1,47:1) : les titres passent en bleu tint (7,89:1). */
+html.dark {
+  --color-background: var(--yeeso-black-pearl);
+  --color-surface: var(--yeeso-shark);
+  --color-text: var(--yeeso-white);
+  --color-text-muted: var(--yeeso-cream);
+  --color-heading: var(--yeeso-primary-tint);
+  --color-border: var(--yeeso-primary-tint);
+  --color-badge-background: var(--yeeso-primary-tint);
+  --color-badge-text: var(--yeeso-black-pearl);
+  /* Le mauve est trop vif sur le fond black pearl : marine, plus doux. */
+  --color-portrait-background: var(--yeeso-primary);
+  --slidev-theme-primary: var(--yeeso-primary-tint);
+  --slidev-code-background: var(--color-surface);
+  --slidev-code-foreground: var(--color-text);
+}
