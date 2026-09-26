@@ -1,6 +1,6 @@
 {
   "name": "slidev-theme-yeeso",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Thème Slidev de l'association Yeeso : L'avenir de l'IT avec les femmes",
   "author": "Manon Carbonnel",
   "license": "SEE LICENSE IN LICENSE",
@@ -13,6 +13,14 @@
     "url": "https://github.com/Yeeso-fr/slidev-theme-yeeso/issues"
   },
   "type": "module",
+  "files": [
+    "layouts",
+    "components",
+    "styles",
+    "setup",
+    "assets",
+    "public/favicon.ico"
+  ],
   "keywords": [
     "slidev-theme",
     "slidev"
@@ -46,7 +54,8 @@
       },
       "htmlAttrs": {
         "lang": "fr"
-      }
+      },
+      "favicon": "/favicon.ico"
     }
   }
 }
